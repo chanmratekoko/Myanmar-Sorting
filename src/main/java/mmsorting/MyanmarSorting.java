@@ -16,13 +16,13 @@ public class MyanmarSorting {
 
 	public static void main(String[] args) {
 
-		List<String> inputMyanmarWord = Arrays.asList("ရှမ်း", "ချင်း", "ကချင်", "ကရင်", "ရခိုင်", "ဗမာ", "ကယား",  "မွန်");
+		List<String> myanmarWordList = Arrays.asList("ရှမ်း", "ချင်း", "ကချင်", "ကရင်", "ရခိုင်", "ဗမာ", "ကယား",  "မွန်");
 		Locale myanmar = new Locale("my", "MM", "");
 
 		Collator coll = Collator.getInstance(myanmar);
-		Collections.sort(inputMyanmarWord, coll);
+		Collections.sort(myanmarWordList, coll);
 
-		inputMyanmarWord.stream().forEach(word -> {
+		myanmarWordList.stream().forEach(word -> {
 			System.out.print(word + "\t");
 		});
 	}
